@@ -1,0 +1,214 @@
+.slider-wrapper-flex-1{
+    flex: 1;
+    margin-left: 10px;
+  }
+  
+.sliderz {
+    width: 80%;
+    height: 57px;
+    border-radius: 0px;
+    border: 0px solid;
+    margin-left: 0px;
+    background-color: transparent;
+    pointer-events: none;
+    z-index: 11;
+    position: relative;
+}
+
+.sliderz .ui-slider-range {
+    position: relative;
+    border-radius: 0px;
+    background: transparent !important;
+}
+
+.sliderz .ui-slider-range:before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 3px 30px 30px 3px;
+    background-position-x: 0px;
+    width: calc(100% + 93px);
+    right: -32px;
+}
+
+
+.sliderz .ui-slider-range:after {
+    position: absolute;
+    color: #7fc359;
+    /* opacity: 0; */
+    align-content: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0px -1px 15px #18f10c;
+    padding: 14px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #61b15a;
+    box-shadow: inset -5px 0px 5px 3px #0414193d;
+    padding-right: 10px;
+    padding-left: 8px;
+    border: 2px solid #45726900;
+    border-left: 0;
+    border-right: 2px solid #457269;
+    border-radius: 10% 94% 94% 10%;
+    border-radius: 0 22px 22px 0;
+    left: -61px;
+    transition: 0.4s;
+    top: 8px;
+    font-family: "Font Awesome 6 Free";
+    background-color: #1e3e3b82;
+    font-size: 9px;
+    content: "\f111";
+    pointer-events: none;
+    z-index: 6;
+}
+
+.slider-section-wrapper.gray-led .sliderz .ui-slider-range:after{
+    color: #888686;
+    text-shadow: 0 0 6px #23252300;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #7c7b7b;
+    background-color: #194756ad;
+    border: 2px solid #7f9b96;
+    border-left: 0;
+
+}
+
+.sliderz .ui-slider-handle {
+    display: block;
+    outline: none;
+    width: 30px !important;
+    height: 63px !important;
+    border: none !important;
+    pointer-events: all;
+    background-color: transparent !important;
+    background-size: 35px 35px !important;
+    background-position-x: 12px !important;
+    background-repeat: no-repeat !important;
+
+}
+
+.sliderz .ui-slider-handle:after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    width: 60px;
+    height: 41px;
+    background-repeat: no-repeat !important;
+}
+
+.sliderz .ui-slider-handle:before {
+    content: '';
+    height: 49%;
+    width: 2px;
+    background-color: #10314121;
+    position: absolute;
+    border-radius: 50%;
+    top: 19px;
+    right: 65px;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.subslider-wrapper {
+    margin: auto;
+}
+
+.sliderz-reverb {
+    width: 200px;
+    height: 20px;
+    border-radius: 11px;
+    border: 0px solid;
+    transition: 0.5s;
+    margin: auto;
+    margin-top: 20px;
+    background: #eea652;
+
+}
+
+.sliderz-reverb .ui-slider-handle {
+    display: block;
+    outline: none;
+
+    top: -7 !important;
+
+    width: 33px !important;
+    height: 33px !important;
+    border: none !important;
+    pointer-events: all;
+    border-radius: 50%;
+    /*     background-size: 35px 35px !important;
+    background-position-x: 12px !important;
+    background-repeat: no-repeat !important; */
+    box-shadow: 7px 1px 18px -7px black, inset -1px 1px 12px 0px #0a0a0ab5;
+
+}
+
+.sliderz-reverb .ui-slider-range {
+    position: relative;
+    border-radius: 11px;
+    width: 280px;
+    box-shadow: inset 0 1px 5px 0px rgba(0, 0, 0, .5),
+        0 1px 0 0px rgba(250, 250, 250, 0);
+    background-color: #efd10a;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#bird .ui-slider-handle:after {
+    top: 17px;
+    right: -14px;
+    background-size: 35px 35px !important;
+    background-image: url(../assets/images/wavy-pool.png);
+    filter: saturate(var(--opacity-slider-bird))
+}
+
+
+#bird .ui-slider-range:before {
+    background: linear-gradient(to right, rgb(51 162 195)10%, #0a1b8c 215%);
+    box-shadow: 0px -1px 23px var(--shadow-spread-bird) #49e0f2b5;
+    filter: saturate(var(--opacity-slider-bird))
+}
+
+#car .ui-slider-handle:after {
+    top: 18px;
+    right: -14px;
+    background-size: 31px 31px !important;
+    background-image: url(../assets/images/bonfire.png);
+    filter: saturate(var(--opacity-slider-car));
+}
+
+
+#car .ui-slider-range:before {
+    background: linear-gradient(to right, rgb(234 170 42)10%, #8c0101 107%);
+    box-shadow: 0px -1px 23px var(--shadow-spread-car) #ffb526b5;
+    filter: saturate(var(--opacity-slider-car));
+}

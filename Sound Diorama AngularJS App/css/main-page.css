@@ -1,0 +1,12 @@
+.main-screen-wrapper{
+    float: left;
+    height: 100%;
+    background-color: aliceblue;
+    width: 100%;
+  }
+  .main-page-content{
+    height: 90%;
+    float: left;
+    width: 100%;
+  }
+  

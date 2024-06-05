@@ -1,0 +1,210 @@
+/* BLOCCHI FONDAMENTALI PAGINA DIORAMA*/
+.diorama-main-wrapper {
+  float: left;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgb(0 52 51 / 99%) 50%, #164451 118%);
+  background-size: 821px;
+  background-color: #f6fdff;
+  background-size: 100% 6px;
+}
+
+.diorama-content {
+  float: left;
+  width: 100%;
+  height: 90%;
+}
+
+.SliderExternalWrapper {
+  height: 58%;
+  bottom: 0;
+  overflow: auto;
+  overflow-x: hidden;
+  position: absolute;
+  background: linear-gradient(to bottom, rgb(6 36 50 / 99%) 10%, #212121 115%);
+  width: 100%;
+  float: left;
+  box-shadow: 2px 0px 13px 2px #42716763, inset 4px 0px 39px -2px #7583804f;
+  background-position: left;
+  background-size: 885px;
+  transition: 0.5s;
+  z-index: 8;
+  border-top: 1px solid #405053;
+  border-radius: 3% 3% 0 0;
+}
+
+.SliderExternalWrapper.expanded {
+  height: 90%;
+}
+
+.slider-expand-wrapper {
+  width: 100%;
+  height: 90%;
+  /* background-color: aliceblue; */
+  float: left;
+  position: absolute;
+  bottom: 0;
+  /* margin-bottom: 14%; */
+  /* margin-top: 50%; */
+  display: block;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.slider-expand-btn {
+  position: absolute;
+  float: right;
+  display: flex;
+  justify-content: center;
+  height: 24px;
+  width: 24%;
+  padding: 5px 8px;
+  padding-bottom: 20px;
+  margin-bottom: -3px;
+  border-radius: 51% 51% 17px 17px;
+  background: linear-gradient(to top, rgb(1 38 37) 50%, #113b47 118%);
+  background-color: #f6fdff;
+  background-size: 100% 5px;
+  color: #a3cef475;
+  right: calc(36% - 0px);
+  /* top: 2px; */
+  bottom: 63%;
+  pointer-events: all;
+  font-size: 17px;
+  transition: 0.7s;
+  box-shadow: -2px -6px 17px -2px #175d60, 5px 5px 15px #093237, inset 5px 5px 10px #144956, inset -5px -5px 10px #07242a;
+  border: 1px solid #263436;
+
+
+
+
+}
+
+.slider-expand-btn.expanded {
+  bottom: 99%;
+  margin-bottom: -8px;
+  border-radius: 17px 17px 51% 51%;
+  padding: 0px 8px;
+  padding-bottom: 0px;
+  padding-top: 3px;
+  color: #fbd60fb3;
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #222, inset -5px -5px 10px #444;
+  border: 1px solid #6e5f2aa6;
+}
+
+
+/* ELEMENTI SEZIONE DIORAMA*/
+.slider-sorter {
+  width: 100%;
+  height: fit-content;
+  float: left;
+  padding-top: 0px;
+  padding-bottom: 15px;
+
+  width: 100%;
+    height: fit-content;
+    float: left;
+    padding-top: 54px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.sliderRepeater {
+/*   float: left;
+  width: 100%;
+  max-height: 102px;
+  height: 76px; */
+  height: 102px!important;
+  max-height: 102px!important;
+  border: 1px solid #1b484e;
+  margin-bottom: 34px;
+  pointer-events: none;
+  box-shadow: 0 0 15px 1px rgb(33 80 73 / 55%);
+  border-radius: 20px;
+  width: 94%;
+/*   margin-left: 3%; */
+  background-color: #04161c;
+  transition: box-shadow 0.6s, background-color 0.4s;
+  padding: 12px 0px;
+
+
+}
+
+.sliderRepeater.sorting{
+  box-shadow: 0 0 18px 8px rgb(113 202 208 / 83%), inset 0 0 16px 1px rgb(45 162 146);
+  border-radius: 20px;
+  border: 1px solid #2d98aa9c;
+}
+
+
+
+.slider-side-power-wrapper {
+  /* position: absolute; */
+  height: 78px;
+  width: 30px;
+  pointer-events: all;
+}
+
+.slider-section-wrapper{
+  display: flex;
+  align-items: center;
+  gap: 21px;
+}
+
+.slider-buttons-wrapper{
+  display: flex;
+  align-items: center;
+  gap: 0px;
+}
+
+
+
+.slider-option-button {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(8, 48, 66, 0);
+  font-size: 22px;
+  color: #a3cef4b3;
+  border: 1px solid #2e6a7859;
+  pointer-events: all;
+  box-shadow: -2px -4px 13px #174b60eb, 5px 5px 15px #092a37, inset 5px 5px 10px #144356e0, inset -5px -5px 10px #07202a;
+  transition: 0.2s;
+}
+
+.slider-option-button.selected {
+  color: #fbd60fb3;
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #222, inset -5px -5px 10px #444;
+  border: 1px solid #6e5f2aa6;
+}
+
+.slider-sort-handler {
+  height: 100%;
+  width: 100%;
+  color: #a3cef47d;
+  padding-right: 14px;
+  padding-left: 19px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  font-size: 21px;
+  pointer-events: all;
+}
+
+
+
+
+
+
+/* MENUS OPZIONI PER I MODULI DEL DIORAMA*/
+.slider-option {
+  height: 32%;
+  width: 100%;
+  position: absolute;
+  opacity: 1;
+  z-index: 7;
+}
+
+

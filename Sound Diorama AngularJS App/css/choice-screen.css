@@ -1,0 +1,51 @@
+.choice-page-wrapper {
+    width: 100%;
+    height: 90%;
+    bottom: 0;
+    overflow-y: auto;
+    background-color: rgba(222, 184, 135, 0.305);
+    position: absolute;
+    opacity: 1;
+    z-index: 10;
+
+}
+
+.push-button-selected {
+    background-color: #f14ea8;
+}
+
+.push-button-wrapper {
+    float: left;
+    margin: 2%;
+    height: 13%;
+    width: 46%;
+    position: relative;
+    margin-bottom: 36px;
+}
+
+.push-button {
+    position: absolute;
+    height: 132%;
+    width: 70%;
+    left: 16%;
+    /* margin-bottom: 10px; */
+    border-radius: 14px;
+    margin: auto;
+    color: #2a5880;
+    /* float: left;*/
+}
+
+.push-button-loading {
+    background-color: #4ea2f171;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 1;
+    pointer-events: none;
+}
+
+#confirm-groups-button {
+    position: absolute;
+    bottom: 20px;
+    left: 40%;
+}

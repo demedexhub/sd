@@ -1,0 +1,90 @@
+*::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+
+  --animation-nome-range-bird: waves;
+  --animation-nome-range-car: waves;
+
+  --opacity-slider-bird: 0;
+  --opacity-slider-car: 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  font-family: 'marcellus sc';
+}
+
+body {
+  background-color: rgb(50 50 50);
+}
+
+.float-left {
+  float: left;
+}
+
+.header-space {
+  height: 10%;
+  width: 100%;
+  float: left;
+  pointer-events: none;
+}
+
+.loading-screen {
+  width: 0%;
+  height: 100%;
+  background-color: #38698e;
+  pointer-events: none;
+  transition: 0.4s width, 0.1s opacity;
+  opacity: 1;
+  position: absolute;
+  z-index: 99;
+  text-align: center;
+}
+.visible-load{
+width: 100%;
+opacity: 1;
+}
+
+.global-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(34, 124, 64);
+  float: left;
+  z-index: 9;
+  position: absolute;
+}
+
+.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.invisible {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+
+
+/* @media screen and (min-width: 500px) {
+  .resizing-on-desktop{
+    width: 400px;
+    margin-left: 24%;
+  }
+
+  .border-radius-on-desktop{
+    border-radius: 5px;
+  }
+  .SliderExternalWrapper.border-radius-on-desktop{
+    border-radius: 17px 17px 5px 5px ;
+  }
+} */

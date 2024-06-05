@@ -1,0 +1,109 @@
+<div id="pippo" class="diorama-main-wrapper border-radius-on-desktop">
+
+    <div class="header-space"></div>
+
+    <!-- WRAPPER INTERNO DELLA PAGINA DIORAMA CON ALTEZZA 90% -->
+    <div class="diorama-content">
+
+<div>{{message}} del diorama</div>
+
+<div style="display: flex; justify-content: center;">
+    <div class="slider-expand-wrapper">
+        <div ng-class="{'expanded': sliderWrapperExpanded == true}" ng-click="toggleExpandSliderWrapper()"
+            class="slider-expand-btn"><i
+                ng-class="{'fa-caret-down' : sliderWrapperExpanded == true, 'fa-caret-up' : sliderWrapperExpanded == false}"
+                class="fa-solid"></i></i></div>
+    </div>
+</div>
+
+
+        <!-- WRAPPER DEGLI SLIDER CON ALTEZZA DEL 60% CIRCA RISPETTO A DIORAMA-CONTENT -->
+        <div ng-class="{'expanded': sliderWrapperExpanded == true}"
+            class="SliderExternalWrapper border-radius-on-desktop">
+
+            <div ng-model="soundCTX1" class="slider-sorter">
+
+
+                <div  class="sliderRepeater slider-repeater-{{gruppo.groupID}}" id="slider-repeater-id-{{gruppo.groupID}}" title="{{$index}}"
+                    ng-repeat="gruppo in soundCTX1 track by gruppo.groupID">
+
+                    <div ng-class="{'invisible' : gruppo.loadComplete == true }"
+                        id="push-button-loading-{{gruppo.groupID}}" class="push-button-loading">Loading
+                    </div>
+
+                    <div ng-class="gruppo.playing ?  '' : 'gray-led'" class="slider-section-wrapper slider-buttons-wrapper-{{gruppo.groupID}}">
+
+                        <div type="checkbox"  ng-click="muteGroup(gruppo)" class="slider-side-power-wrapper"></div>
+
+                        <div class="slider-wrapper-flex-1">
+                            <div class="sliderz" role="slider" id="{{gruppo.groupID}}"></div>
+                        </div>
+
+                        <div class="slider-buttons-wrapper">
+                            <div ng-class="{'selected': gruppo.showMenu == true}" class="slider-option-button"
+                                ng-click="toggleSliderOption(gruppo)">
+                                <span class="iconify sliderIcon" data-icon="ci:menu-alt-01" data-inline="false"></span>
+<!--                                 <span class="iconify sliderIcon" data-icon="streamline:cog-solid" data-inline="false"></span> -->
+<!--                                 <span class="iconify sliderIcon"data-icon="ph:sliders-horizontal-fill" data-inline="false"></span> -->
+                                </div>
+
+                            <div  class="slider-sort-handler" id="slider-sort-handler-{{gruppo.groupID}}" role="sorter"><span class="iconify" style="pointer-events: none;" data-icon="tabler:menu-order"></span></div>
+                        
+  <!--                       <div class="slider-sort-handler"><span class="iconify" data-icon="mdi:menu-swap"></span></div> -->
+                    
+                    </div>
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <!-- WRAPPER DEI MENU NASCOSTI DI OGNI SLIDER -->
+        <div ng-repeat="gruppo in soundCTX1 track by gruppo.groupID">
+            <div ng-class="{'invisible': gruppo.showMenu == false}" class="slider-option ">
+                {{gruppo.name}}
+                <div class="subslider-wrapper">
+                    <div class="sliderz-reverb" role="slider-reverb" id="{{gruppo.groupID}}-reverb"></div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+    <!-- SCEHRMATA DI SCELTA SUONI CON POSIZIONE FISSA CHE COPRE LA PAGINA-->
+    <div ng-class="{'invisible': !choiceMenuOpen}" class="choice-page-wrapper border-radius-on-desktop">
+        <div class="header-space"></div>
+        <div ng-repeat="gruppo in collection track by gruppo.groupID">
+            <div class="push-button-wrapper">
+                <button class="toggle-push-button-{{gruppo.groupID}} push-button"
+                    ng-class="{'push-button-selected': gruppo.selected == true}"
+                    ng-click="pushGroupsInSoundCTX(gruppo)">Push
+                    {{gruppo.name}}</button>
+
+                <!--  <div ng-class="{invisible : gruppo.loadComplete == true }" class="push-button-loading">Loading</div> -->
+            </div>
+        </div>
+        <button id="confirm-groups-button"><a href="#DioramaPage"> Diorama page</a></button>
+    </div>
+
+
+
+
+
+</div>
